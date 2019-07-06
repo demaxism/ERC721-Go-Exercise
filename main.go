@@ -44,8 +44,9 @@ func getOwnerOfToken(address string, tokenIdStr string) (result string, err erro
     }
 
     ownerStr, _ := json.MarshalIndent(owner, "", " ")
+    noquotes := ownerStr[1 : len(ownerStr)-1]
 
-    return string(ownerStr), nil
+    return string(noquotes), nil
 }
 
 func HandleRequest(w http.ResponseWriter, r *http.Request) {
