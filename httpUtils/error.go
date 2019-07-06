@@ -1,19 +1,19 @@
 package httpUtils
 
 import (
-	"log"
-	"net/http"
+    "log"
+    "net/http"
 )
 
 func HandleError(w *http.ResponseWriter, code int, responseText string, logMessage string, err error) {
-	errorMessage := ""
-	writer := *w
+    errorMessage := ""
+    writer := *w
 
-	if err != nil {
-		errorMessage = err.Error()
-	}
+    if err != nil {
+        errorMessage = err.Error()
+    }
 
-	log.Println(logMessage, errorMessage)
-	writer.WriteHeader(code)
-	writer.Write([]byte(responseText))
+    log.Println(logMessage, errorMessage)
+    writer.WriteHeader(code)
+    writer.Write([]byte(responseText))
 }
