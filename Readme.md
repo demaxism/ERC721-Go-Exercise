@@ -20,4 +20,7 @@ Start http server:
 `go run main.go`
 
 In browser, open http://localhost:8080/<CONTRACT_ADDRESS>/<TOKENID>
+
 example: http://localhost:8080/0x77b9F65b1d9805a5DaB29dF9e66F6D5441fC003e/2
+
+This will return the owner of the given token ID and the contract address.
