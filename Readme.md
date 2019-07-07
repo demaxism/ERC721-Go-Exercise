@@ -1,20 +1,20 @@
 
-# Prepare ERC721 contract and mint some tokens
+## Prepare ERC721 contract and mint some tokens
 
 Create a `.secret` file in this directory, with a twelve word phrase mnemonic of your Wallet, as deploying contracts comsumes gas. This will be used by truffle-config.js
 
-## Deploy the contract in test network:
+### Deploy the contract in test network:
 `truffle test test/deploy.js --network ropsten`
 
 Contract StarNFT will be deployed in ropsten network.
 It will generate a `contractAddr.txt` in this directory, with the contract address in it, which will be used by test/mint.js
 
-## Mint a token:
+### Mint a token:
 `truffle test test/mint.js --network ropsten`
 
 TokenId is an incremential integer start from 0.
 
-# Launch the service
+## Launch the service
 
 Start http server:
 `go run main.go`
